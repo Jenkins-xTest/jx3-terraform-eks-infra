@@ -4,12 +4,13 @@
 variable "region" {
   description = "AWS region code for creating resources."
   type = string
+  default = "ap-northeast-2"
 }
 
 variable "cluster_version" {
   description = "Kubernetes version to use for the EKS cluster."
   type        = string
-  default     = "1.17"
+  default     = "1.19"
 }
 
 variable "vault_user" {
@@ -39,14 +40,17 @@ variable "is_jx2" {
 variable "jx_git_url" {
   description = "URL for the Jenins X cluster git repository"
   type        = string
+  default     = "https://github.com/Jenkins-xTest/jx3-eks-vault-cluster.git"
 }
 
 variable "jx_bot_username" {
   description = "Bot username used to interact with the Jenkins X cluster git repository"
   type        = string
+  default     = "MybotMan"
 }
 
 variable "jx_bot_token" {
   description = "Bot token used to interact with the Jenkins X cluster git repository"
   type        = string
+  default     = "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"
 }
